@@ -5,35 +5,40 @@ body {
     background-color: #f0f0f0;
   }
   
-  header {
+header {
     background-color: #e60023;
     color: #fff;
     text-align: center;
     padding: 1em 0;
   }
-  
+
+  main{
+    margin-top: 50px;
+  }
 
   /** nav bar**/
-  nav {
+nav {
+    position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: whitesmoke;
+    width: 100%;
   }
   
 
-  .logo {
-    font-size: 1.5em;
-    font-weight: bold;
+#pinterest-icon img {
+    width: 34px;
   }
   
-  .search-bar {
+.search-bar {
     flex-grow: 1;
     margin: 0 20px;
   }
   
-  input {
+input {
     width: 100%;
     padding: 8px;
     border: none;
@@ -41,66 +46,87 @@ body {
     font-size: 14px;
   }
   
-  .nav-links {
+.nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
   }
   
-  .nav-links li {
+.nav-links li {
     padding: 0;
+    display: flex;
+    justify-content: space-between;
   }
   
-  .nav-links a {
+.nav-links a {
     color: black;
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
     border-radius: 5px;
-    transition: background-color 0.3s;
   }
   
-  .nav-links a:hover {
+.nav-links a:hover {
     color: white;
     background-color: #b7001b;
   }
-  
-  .user-profile {
-    background-color: #fff;
-    color: #e60023;
-    padding: 10px;
+
+
+#notifications img:hover {
+    background-color: #c9c9c9;
     border-radius: 5px;
   }
+
+#notifications img {
+    width: 27px;
+    display: flex;
+  }
+
+#message img:hover {
+    background-color: #c9c9c9;
+    border-radius: 5px;
+  }
+
+#message img {
+    width: 25px;
+  }
   
-  .user-profile a {
+#user-profile {
+    background-color: #fff;
     color: #e60023;
+    padding: 3px;
+    border-radius: 70%;
+  }
+
+#user-profile img {
+    border-radius: 50%;
+    width: 40px;
   }
 
   /** pins **/
 
-  .pin-container {
+.pin-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 16px;
     padding: 16px;
   }
   
-  .pin {
+.pin {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .pin img {
+.pin img {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
   }
   
-  .pin h3 {
+.pin h3 {
     padding: 12px;
     margin: 0;
     font-size: 16px;
   }
-  

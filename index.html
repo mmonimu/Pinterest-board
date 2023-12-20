@@ -8,13 +8,17 @@
 </head>
 
 <body>
-  <header>
+  <!-- <header>
     <h1>My Pinterest-like Page (vision board)</h1>
-  </header>
+  </header> -->
 
   <!-- nav bar-->
     <nav id="navbar-pinterest">
-            <div class="logo">Pinterest</div>
+            <div id="pinterest-icon"> 
+                <a href="https://www.pinterest.com.mx/">
+                    <img src="/img/pinterest.png">
+                </a>
+            </div>
             <div class="search-bar">
               <input class="finder" type="text" placeholder="Search">
             </div>
@@ -22,19 +26,32 @@
               <li><a href="#">Home</a></li>
               <li><a href="#">Following</a></li>
               <li><a href="#">Explore</a></li>
-              <li><a href="#">Notifications</a></li>
-              <li><a href="#">Messages</a></li>
-              <li class="user-profile"><a href="#">User Profile</a></li>
+              <li>
+                <div id="notifications">
+                    <img src="/img/notuf.png" href="#">
+                </img>
+                </div>
+            </li>
+              <li>
+                <div id="message">
+                <img src="/img/msge.png" href="#"></img>
+                </div>
+            </li>
+              <div id="user-profile">
+                <img src="/img/thumb.jpg"></img>
+            </div>
+            </li>
+              
             </ul>
           </nav>
 
-
+<br>
 <!-- `comienzan pins -->
 <main id="content">
 <div class="pin-container">
 
     <div class="pin">
-      <img id=".card-image" src="/img/1.jpg" alt="Pin 1">
+      <img src="/img/1.jpg" alt="Pin 1">
       <h3>#couplegoals</h3>
     </div>
 
