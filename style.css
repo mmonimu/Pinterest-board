@@ -124,7 +124,8 @@ input {
 .pin img {
     width: 100%;
     height: auto;
-    border-bottom: 1px solid #ddd;
+    border-bottom: none;
+    vertical-align: middle;
   }
   
 .pin h3 {
@@ -150,7 +151,10 @@ input {
   .pin img {
     width: 100%;
     height: auto;
-    border-bottom: 1px solid #ddd;
+    border: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
   }
   
   .pin h3 {
