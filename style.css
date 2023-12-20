@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    padding-top: 70px;
   }
   
 header {
@@ -12,20 +13,19 @@ header {
     padding: 1em 0;
   }
 
-  main{
-    margin-top: 50px;
-  }
-
-  /** nav bar**/
-nav {
+/** nav bar**/
+  nav {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     background-color: whitesmoke;
-    width: 100%;
+    z-index: 1000;
   }
   
 
@@ -110,6 +110,7 @@ input {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 16px;
     padding: 16px;
+    margin-top: 10px;
   }
   
 .pin {
@@ -117,6 +118,7 @@ input {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
   }
   
 .pin img {
@@ -129,4 +131,74 @@ input {
     padding: 12px;
     margin: 0;
     font-size: 16px;
+  }
+
+  /* Estilos para los botones en hover */
+  .pin {
+    position: relative; /* Añadido para posicionar los botones correctamente */
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+  }
+  
+  .pin:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Cambia la sombra en hover */
+  }
+  
+  .pin img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .pin h3 {
+    padding: 12px;
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  /* Estilos para los botones en hover */
+  .pin:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .pin:hover .pin-buttons {
+    opacity: 1;
+  }
+  
+  .pin-buttons {
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .pin-button {
+    background-color: #e60023;
+    color: #fff;
+    border: none;
+    padding: 6px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 40px;
+  }
+  
+  
+  .pin-button:hover {
+    background-color: #b7001b;
   }
